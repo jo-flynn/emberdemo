@@ -49,7 +49,7 @@ module.exports = function(grunt) {
                         expand: true,
                         cwd: 'laravel/public/res/less/',
                         src: ['*.less'],
-                        dest: 'css/',
+                        dest: 'laravel/public/res/css/',
                         ext: '.css'
                     }
                 ]
@@ -62,13 +62,13 @@ module.exports = function(grunt) {
                     {
                         expand: true,
                         cwd: 'laravel/public/res/coffee/',
-                        src: ['*.coffee'],
+                        src: ['**/*.coffee'],
                         dest: 'laravel/public/res/js/',
                         ext: '.js'
                     }
                 ]
             }
-        }
+        },
 
         // Contains tasks to run when grunt watch is invoked. Whenever any of the files specified are modified, executes tasks specified.
         watch: {
@@ -77,7 +77,7 @@ module.exports = function(grunt) {
                 tasks: 'less:dev'
             },
             coffee: {
-                files: 'laravel/public/res/coffee/*.coffee',
+                files: 'laravel/public/res/coffee/**/*.coffee',
                 tasks: 'coffee:dev'
             }
         }
