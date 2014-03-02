@@ -7,8 +7,8 @@ vagrantfile-local:
         network:
             private_network: 192.168.56.101
             forwarded_port:
-                4y8e4auS4Ho5:
-                    host: '9393'
+                oTFkkJvXbBL9:
+                    host: '6819'
                     guest: '22'
         provider:
             virtualbox:
@@ -26,7 +26,7 @@ vagrantfile-local:
                     - '--hiera_config /vagrant/puphpet/puppet/hiera.yaml'
                     - '--parser future'
         synced_folder:
-            5sb4OonA2ABI:
+            mYu1OKKFa84X:
                 id: vagrant-root
                 source: ./
                 target: /var/www
@@ -52,7 +52,7 @@ server:
             bash_aliases: null
     _prevent_empty: ''
 mailcatcher:
-    install: 0
+    install: '1'
     settings:
         smtp_ip: 0.0.0.0
         smtp_port: 1025
@@ -66,11 +66,11 @@ apache:
         - php
         - rewrite
     vhosts:
-        InMKSc1qpf6h:
+        ozQdS5b1BlYX:
             servername: emberdemo.dev
             serveraliases:
                 - www.emberdemo.dev
-            docroot: /var/www/emberdemo
+            docroot: /var/www/emberdemo/public
             port: '80'
             setenv:
                 - 'APP_ENV dev'
@@ -82,7 +82,7 @@ apache:
     default_vhost: true
     mod_pagespeed: 0
     mod_spdy: 0
-    sendfile: 0
+    sendfile: "Off"
 php:
     install: '1'
     version: '55'
@@ -115,14 +115,14 @@ drush:
         drush.tag_branch: 6.x
 mysql:
     install: '1'
-    root_password: root
-    phpmyadmin: 0
+    root_password: '123'
+    phpmyadmin: '1'
     adminer: 0
     databases:
-        27UbojufO04T:
+        kdmpyqSTcOnd:
             grant:
                 - ALL
-            name: emberdemo
+            name: emberdemo_dev
             host: localhost
             user: emberdemo
             password: emberdemo
