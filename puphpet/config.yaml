@@ -116,7 +116,7 @@ drush:
 mysql:
     install: '1'
     root_password: '123'
-    phpmyadmin: '1'
+    phpmyadmin: 0
     adminer: 0
     databases:
         kdmpyqSTcOnd:
