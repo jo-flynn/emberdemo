@@ -4,42 +4,6 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
-        // JavaScript Minifier. Add your files to be minified in the src array.
-        // uglify: {
-        //     general: {
-        //         src: [
-
-        //         ],
-        //         dest: 'build/global.min.js'
-        //     }
-        // },
-
-        // // CSS Minifier. Add your files to be minified in the src array.
-        // cssmin: {
-        //     build: {
-        //         src: [
-        //             'css/bootstrap.css',
-        //             'css/font-awesome.css',
-        //             'css/typography.css',
-        //             'css/responsive-tables.css',
-        //             'css/layout.css'
-        //         ],
-        //         dest: 'build/global.min.css'
-        //     },
-        //     admin: {
-        //         src: [
-        //             'css/admin.css'
-        //         ],
-        //         dest: 'build/admin.min.css'
-        //     },
-        //     app: {
-        //         src: [
-        //             'css/app.css'
-        //         ],
-        //         dest: 'build/app.min.css'
-        //     }
-        // },
-
         /* Compiles LESS files in res/less. Uses grunt's glob expansion to get everything in the dir.
          * You won't need to update this when you add a new file. */
         less: {
